@@ -23,6 +23,14 @@ struct LandingView: View {
                 } else {
                     Text("Could not find count of students in database.")
                 }
+                
+                List(viewModel.students) { currentStudent in
+                    HStack {
+                        Text(currentStudent.firstName)
+                        Text(currentStudent.lastName)
+                    }
+                }
+                
             }
             .navigationTitle("Gradebook")
         }
